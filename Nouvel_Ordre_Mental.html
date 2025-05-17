@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nouvel Ordre Mental</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0b0b0b;
+      color: white;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+      background: linear-gradient(90deg, #1e1e1e, #121212);
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #bbbbbb;
+    }
+    nav {
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: #00ffae;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <button onclick="switchLang('fr')">FR</button>
+    <button onclick="switchLang('en')">EN</button>
+  </div>
+
+  <header>
+    <h1 id="site-title">Nouvel Ordre Mental</h1>
+    <p id="site-subtitle">Ici commence ta reprogrammation mentale. Chaque mot est une mise à jour de ton système.</p>
+  </header>
+
+  <nav>
+    <a href="#accueil" id="nav-home">Accueil</a>
+    <a href="#blog" id="nav-blog">Blog</a>
+    <a href="#contact" id="nav-contact">Contact</a>
+  </nav>
+
+  <div class="section" id="accueil">
+    <h2 id="welcome-title">Bienvenue</h2>
+    <p id="welcome-text">Ce site est ton point de départ. Chaque jour, tu avances vers une version plus claire, plus forte et plus disciplinée de toi-même.</p>
+  </div>
+
+  <div class="section" id="blog">
+    <h2 id="blog-title">Blog</h2>
+    <p id="blog-text">Bientôt ici : des textes puissants, des réflexions profondes, des outils mentaux pour transformer ta vie.</p>
+  </div>
+
+  <div class="section" id="contact">
+    <h2 id="contact-title">Contact</h2>
+    <p id="contact-text">Tu veux discuter ? Collaborer ? Écris-moi ici : <a href="mailto:tonemail@example.com">tonemail@example.com</a></p>
+  </div>
+
+  <footer>
+    &copy; 2025 Nouvel Ordre Mental. Tous droits réservés.
+  </footer>
+
+  <script>
+    const content = {
+      fr: {
+        title: "Nouvel Ordre Mental",
+        subtitle: "Ici commence ta reprogrammation mentale. Chaque mot est une mise à jour de ton système.",
+        nav: ["Accueil", "Blog", "Contact"],
+        welcomeTitle: "Bienvenue",
+        welcomeText: "Ce site est ton point de départ. Chaque jour, tu avances vers une version plus claire, plus forte et plus disciplinée de toi-même.",
+        blogTitle: "Blog",
+        blogText: "Bientôt ici : des textes puissants, des réflexions profondes, des outils mentaux pour transformer ta vie.",
+        contactTitle: "Contact",
+        contactText: "Tu veux discuter ? Collaborer ? Écris-moi ici : "
+      },
+      en: {
+        title: "New Mental Order",
+        subtitle: "Here begins your mental reprogramming. Every word is a system update.",
+        nav: ["Home", "Blog", "Contact"],
+        welcomeTitle: "Welcome",
+        welcomeText: "This site is your starting point. Each day, you move closer to a clearer, stronger, and more disciplined version of yourself.",
+        blogTitle: "Blog",
+        blogText: "Coming soon: powerful texts, deep reflections, and mental tools to transform your life.",
+        contactTitle: "Contact",
+        contactText: "Want to talk? Collaborate? Write to me here: "
+      }
+    };
+
+    function switchLang(lang) {
+      const d = content[lang];
+      document.getElementById('site-title').textContent = d.title;
+      document.getElementById('site-subtitle').textContent = d.subtitle;
+      document.getElementById('nav-home').textContent = d.nav[0];
+      document.getElementById('nav-blog').textContent = d.nav[1];
+      document.getElementById('nav-contact').textContent = d.nav[2];
+      document.getElementById('welcome-title').textContent = d.welcomeTitle;
+      document.getElementById('welcome-text').textContent = d.welcomeText;
+      document.getElementById('blog-title').textContent = d.blogTitle;
+      document.getElementById('blog-text').textContent = d.blogText;
+      document.getElementById('contact-title').textContent = d.contactTitle;
+      document.getElementById('contact-text').innerHTML = d.contactText + '<a href="mailto:tonemail@example.com">tonemail@example.com</a>';
+    }
+  </script>
+</body>
+</html>
